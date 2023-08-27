@@ -7,7 +7,7 @@ aws-sdk-cpp:x64-linux                             1.11.132
 arrow:x64-linux                                   12.0.1
 ```
 
-
+## BUILD
 1. docker build --file ubuntu-22.04-cpp-minimal.dockerfile . -t allinux-arrow-leak-check:v1
 2. docker run -d --privileged --name allinux-arrow-leak-check allinux-arrow-leak-check:v1
 3. docker exec -it yhjung-ubuntu-22.04-arrow bash
