@@ -1,9 +1,10 @@
 # arrow-test
 
-docker build --file ubuntu-22.04-cpp-minimal.dockerfile . -t yhjung-arrow-test:v1
-docker run -d --privileged --name allinux-arrow-leak-check allinux-arrow-leak-check:v1
-docker exec -it yhjung-ubuntu-22.04-arrow bash
+1. docker build --file ubuntu-22.04-cpp-minimal.dockerfile . -t yhjung-arrow-test:v1
+2. docker run -d --privileged --name allinux-arrow-leak-check allinux-arrow-leak-check:v1
+3. docker exec -it yhjung-ubuntu-22.04-arrow bash
 
+```
 root@c213dacb3212:/# cd code/build/
 root@c213dacb3212:/code/build# valgrind ./arrow_exam01 
 ==83== Memcheck, a memory error detector
@@ -27,3 +28,4 @@ root@c213dacb3212:/code/build# valgrind ./arrow_exam01
 ==83== For lists of detected and suppressed errors, rerun with: -s
 ==83== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 root@c213dacb3212:/code/build# 
+```
